@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Login</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" sizes="32x32" href="HotelLogo2.png">
+</head>
+<body>
+    <div class="banner">
+        <div class="background-animation"></div>
+        <header>
+            <div class="navbar">
+                <img src="HotelLogo2.png" class="logo" />
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="photo.html">Photos</a></li>
+                    <li><a href="room.html">Rooms</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="registration.html">Login</a></li>
+                </ul>
+            </div>
+        </header>
+        <main>
+            <div class="content">
+                <div class="login-box">
+                    <h1 class="title">LOGIN</h1>
+                    <form id="loginForm" class="form">
+                        <div class="form-group">
+                            <label for="username">Username:</label>
+                            <input type="text" id="username" name="username" class="input" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="password">Password:</label>
+                            <input type="password" id="password" name="password" class="input" required>
+                        </div>
+                        <div class="form-group">
+                            <button type="submit" class="submit">Login</button>
+                        </div>
+                    </form>
+                    <p id="error" style="color: red;"></p>
+                </div>
+            </div>
+        </main>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
+<footer>
+    <p>&copy; 2024 KASTA Systems. All rights reserved.</p>
+</footer>

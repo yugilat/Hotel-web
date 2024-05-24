@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+    <link rel="stylesheet" href="style.css"> 
+    <link rel="icon" type="image/png" sizes="32x32" href="HotelLogo2.png">
+</head>
+<body>
+    <div class="banner">
+        <header>
+            <div class="navbar">
+                <img src="HotelLogo2.png" class="logo" />
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="photo.html">Photos</a></li>
+                    <li><a href="room.html">Rooms</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="registration.html">Login</a></li>
+                </ul>
+            </div>
+        </header>
+
+        <main>
+            <section class="admin-dashboard">
+                <h1>Admin Dashboard</h1>
+                <div class="dashboard-content">
+                    <div class="dashboard-box">
+                        <h2>Manage Rooms</h2>
+                        <p><a href="room_management.html">Go to Room Management</a></p>
+                    </div>
+                    <div class="dashboard-box">
+                        <h2>Manage Bookings</h2>
+                        <p><a href="booking_management.html">Go to Booking Management</a></p>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+    <footer>
+        <p>&copy; 2024 KASTA Systems. All rights reserved.</p>
+    </footer>
+</body>
+</html>
+
+<style>
+    body {
+        background: rgb(55,20,20);
+        background: linear-gradient(90deg, rgba(55,20,20,1) 0%, rgba(1,1,47,1) 91%);
+        color: white;
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+    }
+
+    .banner {
+        background-image: none;
+    }
+
+    .admin-dashboard {
+        text-align: center;
+        margin-top: 50px;
+    }
+
+    .dashboard-content {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+
+    .dashboard-box {
+        width: 30%;
+        margin: 20px;
+        background-color: #1a1a1a;
+        padding: 20px;
+        border-radius: 20px;
+        box-shadow: 0px 0px 50px rgba(0, 0, 0, 0.5);
+        color: #ffffff;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .dashboard-box:hover {
+        transform: scale(0.98);
+        box-shadow: 0px 0px 30px 1px rgba(0, 255, 117, 0.30);
+    }
+
+    .dashboard-box h2 {
+        font-size: 24px;
+        margin-bottom: 10px;
+    }
+
+    .dashboard-box p {
+        font-size: 16px;
+    }
+
+    .dashboard-box a {
+        color: #469fff;
+        text-decoration: none;
+    }
+
+    .dashboard-box a:hover {
+        text-decoration: underline;
+    }
+</style>

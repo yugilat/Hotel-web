@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rooms</title>
+    <link rel="stylesheet" href="style.css"> 
+    <link rel="icon" type="image/png" sizes="32x32" href="HotelLogo2.png">
+</head>
+<body>
+    <header>
+        <div class="navbar">
+            <img src="HotelLogo2.png" class="logo" />
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="photo.html">Photos</a></li>
+                <li><a href="room.html">Rooms</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="registration.html">Login</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <div class="container">
+        <!-- Photo grid -->
+        <section class="photo-grid">
+            <!-- Photo 1 -->
+            <div class="photo-item">
+                <img src="suiterooms\photo1.jpg" alt="Photo 1">
+                <div class="photo-description">
+                    <strong>Standard Suite</strong><br>
+                    • 350 square feet<br>
+                    • Our Standard Suite offers a spacious and elegantly designed retreat, perfect for guests seeking comfort and style. Unwind in the separate living area or enjoy a peaceful night's sleep in the luxurious bedroom. The suite features modern amenities including a flat-screen TV, mini-fridge, and complimentary Wi-Fi. The marble bathroom boasts a deep soaking tub, separate rain shower, and premium bath products.
+                </div>
+                <div class="rating">
+                    <input value="5" name="rate1" id="star5_1" type="radio">
+                    <label title="text" for="star5_1"></label>
+                    <input value="4" name="rate1" id="star4_1" type="radio">
+                    <label title="text" for="star4_1"></label>
+                    <input value="3" name="rate1" id="star3_1" type="radio">
+                    <label title="text" for="star3_1"></label>
+                    <input value="2" name="rate1" id="star2_1" type="radio">
+                    <label title="text" for="star2_1"></label>
+                    <input value="1" name="rate1" id="star1_1" type="radio">
+                    <label title="text" for="star1_1"></label>
+                </div>
+                <!-- Book Now Button -->
+                <button id="book-now-button-2" class="book-now-button" data-room="suite_single">
+                    <a href="bookingpage4.html?room=suite_single" style="text-decoration: none; color: inherit;">Book Now</a>
+                </button>
+            </div>
+
+            <!-- Photo 2 -->
+            <div class="photo-item">
+                <img src="suiterooms\photo2.jpg" alt="Photo 2">
+                <div class="photo-description">
+                    <strong>Business Suite</strong><br>
+                    • 400 square feet<br>
+                    • Our Business Suite offers a sophisticated blend of comfort and functionality, ideal for business travelers or guests seeking extra space. Relax in the spacious living area or catch up on work at the executive desk with complimentary high-speed Wi-Fi. The suite features premium amenities including a Nespresso coffee machine, plush bathrobes, and evening turndown service. The marble bathroom includes a walk-in rain shower, deep soaking tub, and luxury bath products.
+                </div>
+                <div class="rating">
+                    <input value="5" name="rate2" id="star5_2" type="radio">
+                    <label title="text" for="star5_2"></label>
+                    <input value="4" name="rate2" id="star4_2" type="radio">
+                    <label title="text" for="star4_2"></label>
+                    <input value="3" name="rate2" id="star3_2" type="radio">
+                    <label title="text" for="star3_2"></label>
+                    <input value="2" name="rate2" id="star2_2" type="radio">
+                    <label title="text" for="star2_2"></label>
+                    <input value="1" name="rate2" id="star1_2" type="radio">
+                    <label title="text" for="star1_2"></label>
+                </div>
+                <!-- Book Now Button -->
+                <button id="book-now-button-2" class="book-now-button" data-room="another_suite_room">
+                    <a href="bookingpage4.html?room=another_suite_room" style="text-decoration: none; color: inherit;">Book Now</a>
+                </button>
+            </div>
+
+            <!-- Photo 3 -->
+            <div class="photo-item">
+                <img src="suiterooms\photo3.jpg" alt="Photo 3">
+                <div class="photo-description">
+                    <strong>Deluxe Suite</strong><br>
+                    • 500 square feet<br>
+                    • Our Deluxe Suite offers the ultimate luxury experience, combining spacious accommodations with bespoke services and amenities. Relax in the separate living area or indulge in a restful night's sleep in the sumptuous bedroom furnished with a king-sized bed. The suite features a private balcony with stunning city views, a fully stocked minibar, and personalized concierge service. The marble bathroom boasts a Jacuzzi tub, separate rain shower, and premium bath amenities.
+                </div>
+                <div class="rating">
+                    <input value="5" name="rate3" id="star5_3" type="radio">
+                    <label title="text" for="star5_3"></label>
+                    <input value="4" name="rate3" id="star4_3" type="radio">
+                    <label title="text" for="star4_3"></label>
+                    <input value="3" name="rate3" id="star3_3" type="radio">
+                    <label title="text" for="star3_3"></label>
+                    <input value="2" name="rate3" id="star2_3" type="radio">
+                    <label title="text" for="star2_3"></label>
+                    <input value="1" name="rate3" id="star1_3" type="radio">
+                    <label title="text" for="star1_3"></label>
+                </div>
+                <!-- Book Now Button -->
+                <button id="book-now-button-2" class="book-now-button" data-room="yet_another_suite_room">
+                    <a href="bookingpage4.html?room=yet_another_suite_room" style="text-decoration: none; color: inherit;">Book Now</a>
+                </button>
+            </div>
+
+            <!-- Photo 4 -->
+            <div class="photo-item">
+                <img src="suiterooms\photo4.jpg" alt="Photo 4">
+                <div class="photo-description">
+                    <strong>Executive Suite</strong><br>
+                    • 600 square feet<br>
+                    • Our Executive Suite offers unparalleled luxury and sophistication, perfect for discerning travelers. Enjoy expansive living and dining areas, ideal for entertaining guests or hosting business meetings. The suite features a private study, fully equipped kitchenette, and personal butler service. Relax in the opulent bedroom or unwind in the marble bathroom complete with a sauna, steam room, and deluxe spa amenities.
+                </div>
+                <div class="rating">
+                    <input value="5" name="rate4" id="star5_4" type="radio">
+                    <label title="text" for="star5_4"></label>
+                    <input value="4" name="rate4" id="star4_4" type="radio">
+                    <label title="text" for="star4_4"></label>
+                    <input value="3" name="rate4" id="star3_4" type="radio">
+                    <label title="text" for="star3_4"></label>
+                    <input value="2" name="rate4" id="star2_4" type="radio">
+                    <label title="text" for="star2_4"></label>
+                    <input value="1" name="rate4" id="star1_4" type="radio">
+                    <label title="text" for="star1_4"></label>
+                </div>
+                <!-- Book Now Button -->
+                <button id="book-now-button-2" class="book-now-button" data-room="yettest_another_suite_room">
+                    <a href="bookingpage4.html?room=yettest_another_suite_room" style="text-decoration: none; color: inherit;">Book Now</a>
+                </button>
+            </div>
+        </section>
+    </div>
+</body>
+<script>
+    function updateBookNowButtonStatus(room, status) {
+        const button = document.querySelector(`.book-now-button[data-room="${room}"]`);
+        if (button) {
+            if (status === "booked") {
+                button.disabled = true;
+                button.innerHTML = "Already Booked";
+                button.style.backgroundColor = "gray";
+                button.style.cursor = "not-allowed";
+                // Remove the anchor link when disabled
+                const anchor = button.querySelector('a');
+                if (anchor) {
+                    button.removeChild(anchor);
+                }
+            } else {
+                button.disabled = false;
+                button.innerHTML = '<a href="bookingpage4.html?room=' + room + '" style="text-decoration: none; color: inherit;">Book Now</a>';
+                button.style.backgroundColor = "#009688";
+                button.style.cursor = "pointer";
+            }
+        } else {
+            console.error(`Button for room ${room} not found.`);
+        }
+    }
+
+    document.addEventListener("DOMContentLoaded", function() {
+        // Fetch bookings from localStorage and update buttons
+        const bookings = JSON.parse(localStorage.getItem('bookings')) || [];
+        bookings.forEach(booking => {
+            if (booking.status === 'Pending') {
+                updateBookNowButtonStatus(booking.roomName, 'booked');
+            }
+        });
+    });
+
+    // Booking form submission
+    document.getElementById('bookingForm')?.addEventListener('submit', function(event) {
+        event.preventDefault();
+        const formData = new FormData(this);
+
+        fetch('submit_booking.asp', {
+            method: 'POST',
+            body: formData
+        })
+        .then(response => response.text())
+        .then(data => {
+            console.log('Success:', data);
+            // Add the booking information to localStorage
+            const booking = {
+                name: formData.get('name'),
+                roomName: formData.get('roomName'),
+                roomType: formData.get('roomType'),
+                checkInDate: formData.get('checkInDate'),
+                checkOutDate: formData.get('checkOutDate'),
+                adults: formData.get('adults'),
+                children: formData.get('children'),
+                paymentMethod: formData.get('paymentMethod'),
+                status: 'Pending' // Assuming initial status is pending
+            };
+            const bookings = JSON.parse(localStorage.getItem('bookings')) || [];
+            bookings.push(booking);
+            localStorage.setItem('bookings', JSON.stringify(bookings));
+            alert('Booking submitted successfully!');
+            // Optionally, redirect the user to a confirmation page
+            window.location.href = 'confirmation.html';
+        })
+        .catch((error) => {
+            console.error('Error:', error);
+            alert('There was an error submitting your booking.');
+        });
+    });
+</script>
+<script>
+function updateBookNowButtonStatus(room, status) {
+    const button = document.querySelector(`.book-now-button[data-room="${room}"]`);
+    if (button) {
+        if (status === "booked") {
+            button.disabled = true;
+            button.innerHTML = "Already Booked";
+            button.style.backgroundColor = "gray";
+            button.style.cursor = "not-allowed";
+            // Remove the anchor link when disabled
+            const anchor = button.querySelector('a');
+            if (anchor) {
+                button.removeChild(anchor);
+            }
+        } else {
+            button.disabled = false;
+            button.innerHTML = '<a href="bookingpage4.html?room=' + room + '" style="text-decoration: none; color: inherit;">Book Now</a>';
+            button.style.backgroundColor = "#009688";
+            button.style.cursor = "pointer";
+        }
+    } else {
+        console.error(`Button for room ${room} not found.`);
+    }
+}
+
+// Load room statuses from local storage and update buttons
+function loadRoomStatuses() {
+    const roomStatuses = JSON.parse(localStorage.getItem('roomStatuses')) || {};
+    for (const room in roomStatuses) {
+        updateBookNowButtonStatus(room, roomStatuses[room]);
+    }
+}
+
+document.addEventListener("DOMContentLoaded", function() {
+    // Load initial room statuses
+    loadRoomStatuses();
+
+    // Listen for the custom event from room_management.html
+    window.addEventListener("roomStatusUpdated", function(event) {
+        const { room, status } = event.detail;
+        updateBookNowButtonStatus(room, status);
+    });
+});
+</script>
+</html>
+<style>
+    .container {
+        max-width: 1400px;
+        margin: 0 auto;
+        padding: 20px;
+        position: absolute;
+        top: 50%; /* Adjust the percentage to move it higher */
+        left: 50%;
+        transform: translate(-50%, -50%);
+        
+    }
+
+    body {
+        background: rgb(55,20,20);
+        background: linear-gradient(90deg, rgba(55,20,20,1) 0%, rgba(1,1,47,1) 91%);
+        color: white; /* Text color */
+        font-family: Arial, sans-serif; /* Font family */
+        margin: 0; /* Remove default margin */
+        padding: 0; /* Remove default padding */
+    }
+
+    .banner {
+        background-image: none;
+    }
+
+    .photo-grid {
+        display: flex;
+        margin-left: -7px;
+        margin-right: -7px;
+    }
+
+    .photo-item {
+        width: 50%; 
+        overflow: auto;
+        border-radius: 10px;
+        background-color: #414141;
+        box-shadow: 0px 0px 50px rgba(212, 211, 211, 0.5);
+        position: relative; /* Add position relative */
+        
+    }
+
+    .photo-item img {
+        width: 400px;
+        height: 250px;
+        display: block;
+        transition: transform 0.3s ease;
+    }
+
+    .photo-item img:hover {
+        transform: scale(1.05);
+    }
+
+    .photo-description {
+        margin-top: 10px;
+        font-size: 14px;
+        margin-left: 10px;
+    }
+
+    .rating:not(:checked) > input {
+        position: absolute;
+        appearance: none;
+    }
+
+    .rating {
+        display: inline-block;
+        margin-left: 20px;
+    }
+
+    .rating input {
+        display: none;
+    }
+
+    .rating label {
+        float: right;
+        cursor: pointer;
+        color: #ccc;
+        transition: color 0.3s;
+    }
+
+    .rating label:before {
+        content: '\2605';
+        font-size: 30px;
+    }
+
+    .rating input:checked ~ label,
+    .rating label:hover,
+    .rating label:hover ~ label {
+        color: #009688;
+        transition: color 0.3s;
+    }
+
+    .book-now-button {
+        display: block;
+        margin: 0 auto; /* Add this to center horizontally */
+        margin-top: 10px; /* Adjust the margin as needed */
+        background-color: #009688;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        padding: 10px 20px;
+        font-size: 16px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+    }
+
+    .book-now-button:hover {
+        background-color: #00796b;
+    }
+</style>

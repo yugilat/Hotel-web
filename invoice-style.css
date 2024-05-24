@@ -1,0 +1,56 @@
+body {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+}
+
+h2 {
+    color: #4e9984;
+}
+
+p {
+    margin-bottom: 10px;
+}
+
+strong {
+    font-weight: bold;
+}
+
+.invoice-container {
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+}
+
+.invoice-details {
+    margin-bottom: 20px;
+}
+
+.invoice-details h2 {
+    color: #333;
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.invoice-details p {
+    color: #666;
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+
+.go-back-button {
+    background-color: #4e9984;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+
+.go-back-button:hover {
+    background-color: #4d9a8c;
+}

@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Room Management</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body style="background: rgb(55,20,20); background: linear-gradient(90deg, rgba(55,20,20,1) 0%, rgba(1,1,47,1) 91%);">
+    <header>
+        <div class="navbar">
+            <img src="HotelLogo2.png" class="logo" alt="Hotel Logo" />
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="photo.html">Photos</a></li>
+                <li><a href="room.html">Rooms</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="registration.html">Login</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <div class="container">
+
+        <div class="room-info" style="background-color: #1a1a1a; padding: 20px; border-radius: 10px; box-shadow: 0px 0px 50px rgba(0, 0, 0, 0.5); margin-bottom: 20px;">
+            <h3 style="color: white;">Standard Single Room</h3>
+            <select class="status-select" data-room="standard_single" style="margin-bottom: 10px;">
+                <option value="available">Available</option>
+                <option value="booked">Booked</option>
+            </select>
+            <button class="update-button" style="background-color: #469fff; color: white; border: none; border-radius: 5px; padding: 10px 20px; font-size: 16px; cursor: pointer; transition: background-color 0.3s;">Update</button>
+        </div>
+
+        <div class="room-info" style="background-color: #1a1a1a; padding: 20px; border-radius: 10px; box-shadow: 0px 0px 50px rgba(0, 0, 0, 0.5); margin-bottom: 20px;">
+            <h3 style="color: white;">Standard Room 2</h3>
+            <select class="status-select" data-room="standard_room_2" style="margin-bottom: 10px;">
+                <option value="available">Available</option>
+                <option value="booked">Booked</option>
+            </select>
+            <button class="update-button" style="background-color: #469fff; color: white; border: none; border-radius: 5px; padding: 10px 20px; font-size: 16px; cursor: pointer; transition: background-color 0.3s;">Update</button>
+        </div>
+
+        <div class="room-info" style="background-color: #1a1a1a; padding: 20px; border-radius: 10px; box-shadow: 0px 0px 50px rgba(0, 0, 0, 0.5); margin-bottom: 20px;">
+            <h3 style="color: white;">Standard Room 3</h3>
+            <select class="status-select" data-room="standard_room_3" style="margin-bottom: 10px;">
+                <option value="available">Available</option>
+                <option value="booked">Booked</option>
+            </select>
+            <button class="update-button" style="background-color: #469fff; color: white; border: none; border-radius: 5px; padding: 10px 20px; font-size: 16px; cursor: pointer; transition: background-color 0.3s;">Update</button>
+        </div>
+
+        <div class="room-info" style="background-color: #1a1a1a; padding: 20px; border-radius: 10px; box-shadow: 0px 0px 50px rgba(0, 0, 0, 0.5); margin-bottom: 20px;">
+            <h3 style="color: white;">Standard Room 4</h3>
+            <select class="status-select" data-room="standard_room_4" style="margin-bottom: 10px;">
+                <option value="available">Available</option>
+                <option value="booked">Booked</option>
+            </select>
+            <button class="update-button" style="background-color: #469fff; color: white; border: none; border-radius: 5px; padding: 10px 20px; font-size: 16px; cursor: pointer; transition: background-color 0.3s;">Update</button>
+        </div>
+    </div>
+
+    <div class="container">
+
+<div class="room-info" style="background-color: #1a1a1a; padding: 20px; border-radius: 10px; box-shadow: 0px 0px 50px rgba(0, 0, 0, 0.5); margin-bottom: 20px;">
+    <h3 style="color: white;">Deluxe Room 1</h3>
+    <select class="status-select" data-room="deluxe_single" style="margin-bottom: 10px;">
+        <option value="available">Available</option>
+        <option value="booked">Booked</option>
+    </select>
+    <button class="update-button" style="background-color: #469fff; color: white; border: none; border-radius: 5px; padding: 10px 20px; font-size: 16px; cursor: pointer; transition: background-color 0.3s;">Update</button>
+</div>
+
+<div class="room-info" style="background-color: #1a1a1a; padding: 20px; border-radius: 10px; box-shadow: 0px 0px 50px rgba(0, 0, 0, 0.5); margin-bottom: 20px;">
+    <h3 style="color: white;">Deluxe Room 2</h3>
+    <select class="status-select" data-room="deluxe_room_2" style="margin-bottom: 10px;">
+        <option value="available">Available</option>
+        <option value="booked">Booked</option>
+    </select>
+    <button class="update-button" style="background-color: #469fff; color: white; border: none; border-radius: 5px; padding: 10px 20px; font-size: 16px; cursor: pointer; transition: background-color 0.3s;">Update</button>
+</div>
+
+<div class="room-info" style="background-color: #1a1a1a; padding: 20px; border-radius: 10px; box-shadow: 0px 0px 50px rgba(0, 0, 0, 0.5); margin-bottom: 20px;">
+    <h3 style="color: white;">Deluxe Room 3</h3>
+    <select class="status-select" data-room="deluxe_room_3" style="margin-bottom: 10px;">
+        <option value="available">Available</option>
+        <option value="booked">Booked</option>
+    </select>
+    <button class="update-button" style="background-color: #469fff; color: white; border: none; border-radius: 5px; padding: 10px 20px; font-size: 16px; cursor: pointer; transition: background-color 0.3s;">Update</button>
+</div>
+
+<div class="room-info" style="background-color: #1a1a1a; padding: 20px; border-radius: 10px; box-shadow: 0px 0px 50px rgba(0, 0, 0, 0.5); margin-bottom: 20px;">
+    <h3 style="color: white;">Deluxe Room 4</h3>
+    <select class="status-select" data-room="deluxe_room_4" style="margin-bottom: 10px;">
+        <option value="available">Available</option>
+        <option value="booked">Booked</option>
+    </select>
+    <button class="update-button" style="background-color: #469fff; color: white; border: none; border-radius: 5px; padding: 10px 20px; font-size: 16px; cursor: pointer; transition: background-color 0.3s;">Update</button>
+</div>
+</div>
+
+<div class="container">
+
+<div class="room-info" style="background-color: #1a1a1a; padding: 20px; border-radius: 10px; box-shadow: 0px 0px 50px rgba(0, 0, 0, 0.5); margin-bottom: 20px;">
+    <h3 style="color: white;">Business Room 1</h3>
+    <select class="status-select" data-room="business_single" style="margin-bottom: 10px;">
+        <option value="available">Available</option>
+        <option value="booked">Booked</option>
+    </select>
+    <button class="update-button" style="background-color: #469fff; color: white; border: none; border-radius: 5px; padding: 10px 20px; font-size: 16px; cursor: pointer; transition: background-color 0.3s;">Update</button>
+</div>
+
+<div class="room-info" style="background-color: #1a1a1a; padding: 20px; border-radius: 10px; box-shadow: 0px 0px 50px rgba(0, 0, 0, 0.5); margin-bottom: 20px;">
+    <h3 style="color: white;">Business Room 2</h3>
+    <select class="status-select" data-room="business_room_2" style="margin-bottom: 10px;">
+        <option value="available">Available</option>
+        <option value="booked">Booked</option>
+    </select>
+    <button class="update-button" style="background-color: #469fff; color: white; border: none; border-radius: 5px; padding: 10px 20px; font-size: 16px; cursor: pointer; transition: background-color 0.3s;">Update</button>
+</div>
+
+<div class="room-info" style="background-color: #1a1a1a; padding: 20px; border-radius: 10px; box-shadow: 0px 0px 50px rgba(0, 0, 0, 0.5); margin-bottom: 20px;">
+    <h3 style="color: white;">Business Room 3</h3>
+    <select class="status-select" data-room="business_room_3" style="margin-bottom: 10px;">
+        <option value="available">Available</option>
+        <option value="booked">Booked</option>
+    </select>
+    <button class="update-button" style="background-color: #469fff; color: white; border: none; border-radius: 5px; padding: 10px 20px; font-size: 16px; cursor: pointer; transition: background-color 0.3s;">Update</button>
+</div>
+
+<div class="room-info" style="background-color: #1a1a1a; padding: 20px; border-radius: 10px; box-shadow: 0px 0px 50px rgba(0, 0, 0, 0.5); margin-bottom: 20px;">
+    <h3 style="color: white;">Business Room 4</h3>
+    <select class="status-select" data-room="business_room_4" style="margin-bottom: 10px;">
+        <option value="available">Available</option>
+        <option value="booked">Booked</option>
+    </select>
+    <button class="update-button" style="background-color: #469fff; color: white; border: none; border-radius: 5px; padding: 10px 20px; font-size: 16px; cursor: pointer; transition: background-color 0.3s;">Update</button>
+</div>
+</div>
+
+<div class="container">
+
+<div class="room-info" style="background-color: #1a1a1a; padding: 20px; border-radius: 10px; box-shadow: 0px 0px 50px rgba(0, 0, 0, 0.5); margin-bottom: 20px;">
+    <h3 style="color: white;">Standard Suite</h3>
+    <select class="status-select" data-room="suite_single" style="margin-bottom: 10px;">
+        <option value="available">Available</option>
+        <option value="booked">Booked</option>
+    </select>
+    <button class="update-button" style="background-color: #469fff; color: white; border: none; border-radius: 5px; padding: 10px 20px; font-size: 16px; cursor: pointer; transition: background-color 0.3s;">Update</button>
+</div>
+
+<div class="room-info" style="background-color: #1a1a1a; padding: 20px; border-radius: 10px; box-shadow: 0px 0px 50px rgba(0, 0, 0, 0.5); margin-bottom: 20px;">
+    <h3 style="color: white;">Business Suite</h3>
+    <select class="status-select" data-room="another_suite_room" style="margin-bottom: 10px;">
+        <option value="available">Available</option>
+        <option value="booked">Booked</option>
+    </select>
+    <button class="update-button" style="background-color: #469fff; color: white; border: none; border-radius: 5px; padding: 10px 20px; font-size: 16px; cursor: pointer; transition: background-color 0.3s;">Update</button>
+</div>
+
+<div class="room-info" style="background-color: #1a1a1a; padding: 20px; border-radius: 10px; box-shadow: 0px 0px 50px rgba(0, 0, 0, 0.5); margin-bottom: 20px;">
+    <h3 style="color: white;">Deluxe Suite</h3>
+    <select class="status-select" data-room="yet_another_suite_room" style="margin-bottom: 10px;">
+        <option value="available">Available</option>
+        <option value="booked">Booked</option>
+    </select>
+    <button class="update-button" style="background-color: #469fff; color: white; border: none; border-radius: 5px; padding: 10px 20px; font-size: 16px; cursor: pointer; transition: background-color 0.3s;">Update</button>
+</div>
+
+<div class="room-info" style="background-color: #1a1a1a; padding: 20px; border-radius: 10px; box-shadow: 0px 0px 50px rgba(0, 0, 0, 0.5); margin-bottom: 20px;">
+    <h3 style="color: white;">Executive Suite</h3>
+    <select class="status-select" data-room="yettest_another_suite_room" style="margin-bottom: 10px;">
+        <option value="available">Available</option>
+        <option value="booked">Booked</option>
+    </select>
+    <button class="update-button" style="background-color: #469fff; color: white; border: none; border-radius: 5px; padding: 10px 20px; font-size: 16px; cursor: pointer; transition: background-color 0.3s;">Update</button>
+</div>
+</div>
+
+    <script>
+        // Get all update buttons
+        var updateButtons = document.querySelectorAll(".update-button");
+
+        // Loop through each update button and attach event listener
+        updateButtons.forEach(function(button) {
+            button.addEventListener("click", function() {
+                var room = this.parentElement.querySelector(".status-select").getAttribute("data-room");
+                var status = this.parentElement.querySelector(".status-select").value;
+                updateRoomStatus(room, status);
+            });
+        });
+
+        // Function to update room status
+        function updateRoomStatus(room, status) {
+    var event = new CustomEvent("roomStatusUpdated", { detail: { room: room, status: status } });
+    window.parent.document.dispatchEvent(event);
+        }
+    </script>
+    <script>
+        // Function to update room status
+        function updateRoomStatus(room, status) {
+            // Save the room status to local storage
+            let roomStatuses = JSON.parse(localStorage.getItem('roomStatuses')) || {};
+            roomStatuses[room] = status;
+            localStorage.setItem('roomStatuses', JSON.stringify(roomStatuses));
+    
+            console.log("Room:", room);
+            console.log("Status:", status);
+            alert("Room status updated successfully!");
+    
+            // Create a new event to notify other pages
+            var event = new CustomEvent("roomStatusUpdated", { detail: { room: room, status: status } });
+            window.dispatchEvent(event);
+        }
+    
+        // Get all update buttons
+        var updateButtons = document.querySelectorAll(".update-button");
+    
+        // Loop through each update button and attach event listener
+        updateButtons.forEach(function(button) {
+    if (!button.hasEventListener('click')) {
+        button.addEventListener("click", function() {
+            var room = this.parentElement.querySelector(".status-select").getAttribute("data-room");
+            var status = this.parentElement.querySelector(".status-select").value;
+            updateRoomStatus(room, status);
+        });
+    }
+});
+
+    </script>
+    
+</body>
+<script>
+    function updateBookNowButtonStatus(room, status) {
+        const button = document.querySelector(`.book-now-button[data-room="${room}"]`);
+        if (button) {
+            if (status === "booked") {
+                button.disabled = true;
+                button.innerHTML = "Already Booked";
+                button.style.backgroundColor = "gray";
+                button.style.cursor = "not-allowed";
+                // Remove the anchor link when disabled
+                const anchor = button.querySelector('a');
+                if (anchor) {
+                    button.removeChild(anchor);
+                }
+            } else {
+                button.disabled = false;
+                button.innerHTML = '<a href="bookingpage4.html?room=' + room + '" style="text-decoration: none; color: inherit;">Book Now</a>';
+                button.style.backgroundColor = "#009688";
+                button.style.cursor = "pointer";
+            }
+        } else {
+            console.error(`Button for room ${room} not found.`);
+        }
+    }
+
+    document.addEventListener("DOMContentLoaded", function() {
+        // Fetch bookings from localStorage and update buttons
+        const bookings = JSON.parse(localStorage.getItem('bookings')) || [];
+        bookings.forEach(booking => {
+            if (booking.status === 'Pending') {
+                updateBookNowButtonStatus(booking.roomName, 'booked');
+            }
+        });
+    });
+
+    // Booking form submission
+    document.getElementById('bookingForm')?.addEventListener('submit', function(event) {
+        event.preventDefault();
+        const formData = new FormData(this);
+
+        fetch('submit_booking.asp', {
+            method: 'POST',
+            body: formData
+        })
+        .then(response => response.text())
+        .then(data => {
+            console.log('Success:', data);
+            // Add the booking information to localStorage
+            const booking = {
+                name: formData.get('name'),
+                roomName: formData.get('roomName'),
+                roomType: formData.get('roomType'),
+                checkInDate: formData.get('checkInDate'),
+                checkOutDate: formData.get('checkOutDate'),
+                adults: formData.get('adults'),
+                children: formData.get('children'),
+                paymentMethod: formData.get('paymentMethod'),
+                status: 'Pending' // Assuming initial status is pending
+            };
+            const bookings = JSON.parse(localStorage.getItem('bookings')) || [];
+            bookings.push(booking);
+            localStorage.setItem('bookings', JSON.stringify(bookings));
+            alert('Booking submitted successfully!');
+            // Optionally, redirect the user to a confirmation page
+            window.location.href = 'confirmation.html';
+        })
+        .catch((error) => {
+            console.error('Error:', error);
+            alert('There was an error submitting your booking.');
+        });
+    });
+</script>
+<script>
+function updateBookNowButtonStatus(room, status) {
+    const button = document.querySelector(`.book-now-button[data-room="${room}"]`);
+    if (button) {
+        if (status === "booked") {
+            button.disabled = true;
+            button.innerHTML = "Already Booked";
+            button.style.backgroundColor = "gray";
+            button.style.cursor = "not-allowed";
+            // Remove the anchor link when disabled
+            const anchor = button.querySelector('a');
+            if (anchor) {
+                button.removeChild(anchor);
+            }
+        } else {
+            button.disabled = false;
+            button.innerHTML = '<a href="bookingpage4.html?room=' + room + '" style="text-decoration: none; color: inherit;">Book Now</a>';
+            button.style.backgroundColor = "#009688";
+            button.style.cursor = "pointer";
+        }
+    } else {
+        console.error(`Button for room ${room} not found.`);
+    }
+}
+
+// Load room statuses from local storage and update buttons
+function loadRoomStatuses() {
+    const roomStatuses = JSON.parse(localStorage.getItem('roomStatuses')) || {};
+    for (const room in roomStatuses) {
+        updateBookNowButtonStatus(room, roomStatuses[room]);
+    }
+}
+
+document.addEventListener("DOMContentLoaded", function() {
+    // Load initial room statuses
+    loadRoomStatuses();
+
+    // Listen for the custom event from room_management.html
+    window.addEventListener("roomStatusUpdated", function(event) {
+        const { room, status } = event.detail;
+        updateBookNowButtonStatus(room, status);
+    });
+});
+</script>
+</html>
+<style>
+.container {
+    align-items: center; /* Center horizontally */
+    justify-content: center; /* Center vertically */
+    text-align: center; /* Center text */
+ position: center;
+    display: inline-block;
+    width: 40%;
+    margin: 50px;
+    background-color: #1a1a1a;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0px 0px 50px rgba(0, 0, 0, 0.5);  
+    color: #ffffff;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Added transition */
+}
+.container:hover {
+    transform: scale(0.98);
+    box-shadow: 0px 0px 30px 1px rgba(0, 255, 117, 0.30); /* Added box-shadow */
+}
+</style>

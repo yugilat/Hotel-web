@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Photos</title>
+    <link rel="stylesheet" href="style.css"> 
+    <link rel="icon" type="image/png" sizes="32x32" href="HotelLogo2.png">
+    <style>
+        body {
+            background: rgb(55,20,20);
+            background: linear-gradient(90deg, rgba(55,20,20,1) 0%, rgba(1,1,47,1) 91%);
+            color: white; 
+            font-family: Arial, sans-serif; 
+            margin: 0; 
+            padding: 0; 
+        }
+
+        .banner {
+            background-image: none;
+        }
+
+        .photo-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr); 
+            gap: 10px; 
+        }
+
+        .photo-item {
+            width: 100%; 
+        }
+
+        .photo-item img {
+            width: 100%; 
+            height: auto; 
+            display: block; 
+        }
+        
+        h1 {
+            color: white; 
+        }
+    </style>
+</head>
+<body>
+  
+    <div class="banner">
+        <div class="background-animation"></div>
+
+     
+        <header>
+            <div class="navbar">
+                <img src="HotelLogo2.png" class="logo" />
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="photo.html">Photos</a></li>
+                    <li><a href="room.html">Rooms</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="registration.html">Login</a></li>
+                </ul>
+            </div>
+        </header>
+
+     
+        <main>
+            <h1>Photo Gallery</h1>
+            <style>
+                h1 {
+                    color: white;
+                }
+                
+            </style>
+            <section class="photo-grid">
+
+                <div class="photo-item">
+                    <img src="roomphoto/photo1.jpg" alt="Photo 1">
+                </div>
+
+                <div class="photo-item">
+                    <img src="roomphoto/photo2.jpg" alt="Photo 2">
+                </div>
+
+                <div class="photo-item">
+                    <img src="roomphoto/photo3.jpg" alt="Photo 3">
+                </div>
+
+                <div class="photo-item">
+                    <img src="roomphoto/photo4.jpg" alt="Photo 4">
+                </div>
+
+                <div class="photo-item">
+                    <img src="roomphoto/photo5.jpg" alt="Photo 5">
+                </div>
+
+                <div class="photo-item">
+                    <img src="roomphoto/photo6.jpg" alt="Photo 6">
+                </div>
+
+                <div class="photo-item">
+                    <img src="roomphoto/photo7.jpg" alt="Photo 7">
+                </div>
+
+                <div class="photo-item">
+                    <img src="roomphoto/photo8.jpg" alt="Photo 8">
+                </div>
+
+                <div class="photo-item">
+                    <img src="roomphoto/photo9.jpg" alt="Photo 9">
+                </div>
+
+                <div class="photo-item">
+                    <img src="roomphoto/photo10.jpg" alt="Photo 10">
+                </div>
+            </section>
+        </main>
+    </div>
+    <footer>
+        <p>&copy; 2024 KASTA Systems. All rights reserved.</p>
+    </footer>
+</body>
+</html>

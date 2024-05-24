@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Booking</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" sizes="32x32" href="HotelLogo2.png">
+</head>
+<body>
+    <header>
+        <div class="navbar">
+            <img src="HotelLogo2.png" class="logo" />
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="photo.html">Photos</a></li>
+                <li><a href="room.html">Rooms</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="registration.html">Login</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <div class="container">
+        <h1>Booking Details</h1>
+        <div id="room-details"></div> <!-- Container to display room details -->
+        <form id="booking-form">
+            <label for="check-in-date">Check-in Date:</label>
+            <input type="date" id="check-in-date" name="check-in-date" class="input-field" required><br>
+
+            <label for="check-out-date">Check-out Date:</label>
+            <input type="date" id="check-out-date" name="check-out-date" class="input-field" required><br>
+
+            <label for="adults">Number of Adults:</label>
+            <input type="number" id="adults" name="adults" class="input-field" min="1" max="6" required><br>
+
+            <label for="children">Number of Children:</label>
+            <input type="number" id="children" name="children" class="input-field" min="0" max="5"><br>
+
+            <label for="name">Your Name:</label>
+            <input type="text" id="name" name="name" class="input-field" required><br>
+
+            <label for="payment-method">Payment Method:</label>
+            <select id="payment-method" name="payment-method" class="input-field" required>
+                <option value="credit-card">Credit Card</option>
+                <option value="cash">Cash</option>
+            </select><br>
+            
+            <input type="button" value="Proceed to Payment" class="book-now-button" onclick="generateInvoice()">
+        </form>
+    </div>
+
+    <script>
+
+function generateInvoice() {
+            // Retrieve form data
+            const checkInDate = document.getElementById('check-in-date').value;
+            const checkOutDate = document.getElementById('check-out-date').value;
+            const adults = document.getElementById('adults').value;
+            const children = document.getElementById('children').value;
+            const name = document.getElementById('name').value;
+            const paymentMethod = document.getElementById('payment-method').value;
+
+            // Retrieve room details from the room-details element
+            const roomDetailsText = document.querySelector('#room-details h2').textContent;
+            const roomDetails = roomDetailsText.split(' - ');
+            const roomName = roomDetails[0];
+            const roomType = roomDetails[1];
+
+            // Construct booking object
+            const booking = {
+                checkInDate,
+                checkOutDate,
+                adults,
+                children,
+                name,
+                roomName,
+                roomType,
+                paymentMethod,
+                status: 'Booked'
+            };
+
+            // Save booking to booking management (you can replace this with your actual implementation)
+            saveBooking(booking);
+
+            // Construct invoice content
+            const invoiceDetails = `
+                <!DOCTYPE html>
+                <html lang="en">
+                <head>
+                    <meta charset="UTF-8">
+                    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                    <link rel="stylesheet" href="invoice-style.css">
+                    <title>Invoice</title>
+                </head>
+                <body>
+                    <div class="invoice-container">
+                        <h2>Invoice</h2>
+                        <div class="invoice-details">
+                            <p><strong>Name:</strong> ${name}</p>
+                            <p><strong>Check-in Date:</strong> ${checkInDate}</p>
+                            <p><strong>Check-out Date:</strong> ${checkOutDate}</p>
+                            <p><strong>Adults:</strong> ${adults}</p>
+                            <p><strong>Children:</strong> ${children}</p>
+                            <p><strong>Room Name:</strong> ${roomName}</p>
+                            <p><strong>Room Type:</strong> ${roomType}</p>
+                            <p><strong>Payment Method:</strong> ${paymentMethod}</p>
+                            <p><strong>Status:</strong> ${booking.status}</p>
+                        </div>
+                        <button onclick="goBack()">Go back</button>
+                    </div>
+                </body>
+                </html>
+            `;
+
+            // Open a new window with the invoice content
+            const invoiceWindow = window.open('', '_blank');
+            invoiceWindow.document.open();
+            invoiceWindow.document.write(invoiceDetails);
+            invoiceWindow.document.close();
+        }
+        function saveBooking(booking) {
+    // Retrieve existing bookings from local storage or initialize as empty array
+    let bookings = JSON.parse(localStorage.getItem('bookings')) || [];
+
+    // Add new booking to the array
+    bookings.push(booking);
+
+    // Save updated bookings array back to local storage
+    localStorage.setItem('bookings', JSON.stringify(bookings));
+}
+        window.onload = function() {
+            // Retrieve room parameter from URL
+            const urlParams = new URLSearchParams(window.location.search);
+            const room = urlParams.get('room');
+
+            // Display room details based on the parameter
+            const roomDetailsContainer = document.getElementById('room-details');
+            if (room === 'suite_single') {
+                roomDetailsContainer.innerHTML = `
+                <img src="suiterooms/photo1.jpg" alt="Room Photo" class="room-photo">
+                    <div class="room-details">
+                        <h2>Suite Room - Standard</h2>
+                        <!-- Other details about the room -->
+                    </div>
+                `;
+            } else if (room === 'another_suite_room') {
+                roomDetailsContainer.innerHTML = `
+                    <img src="suiterooms/photo2.jpg" alt="Room Photo" class="room-photo">
+                    <div class="room-details">
+                        <h2>Suite Room 2 - Business</h2>
+                        <!-- Other details about the room -->
+                    </div>
+                `;
+            } else if (room === 'yet_another_suite_room') {
+                roomDetailsContainer.innerHTML = `
+                    <img src="suiterooms/photo3.jpg" alt="Room Photo" class="room-photo">
+                    <div class="room-details">
+                        <h2>Suite Room 3 - Deluxe</h2>
+                        <!-- Other details about the room -->
+                    </div>
+                `;
+            } else if (room === 'yettest_another_suite_room') {
+                roomDetailsContainer.innerHTML = `
+                    <img src="suiterooms/photo4.jpg" alt="Room Photo" class="room-photo">
+                    <div class="room-details">
+                        <h2>Suite Room 4 - Executive</h2>
+                        <!-- Other details about the room -->
+                    </div>
+                `;
+            } else {
+                roomDetailsContainer.innerHTML = '<p>Room not found</p>';
+            }
+        };
+    </script>
+</body>
+</html>
+<style>
+    body {
+        background: rgb(55,20,20);
+        background: linear-gradient(90deg, rgba(55,20,20,1) 0%, rgba(1,1,47,1) 91%);
+    }
+    .container {
+        max-width: 600px;
+        height: auto;
+        margin: 0 auto;
+        padding: 20px;
+        background-color: rgba(48, 48, 48, 0.5);
+        border-radius: 10px;
+        box-shadow: 0px 0px 50px rgba(212, 211, 211, 0.5);
+        margin-bottom: 20px;
+    }
+
+    form {
+        max-height: 400px;
+        max-width: 400px;
+        overflow-y: auto;
+        margin: 0 auto;
+        color: white;
+    }
+
+    h1 {
+        font-size: 24px;
+        margin-bottom: 20px;
+        color: white;
+        text-align: center;
+    }
+
+    .room-photo {
+        width: auto;
+        max-width: 100%;
+        height: auto;
+        margin: 0 auto;
+        border-radius: 10px;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+        display: block;
+        margin-bottom: 20px;
+    }
+
+    .room-details {
+        overflow: hidden;
+    }
+
+    .room-details h2 {
+        font-size: 20px;
+        color: white;
+        margin-bottom: 30px;
+        text-align: center;
+    }
+
+    .input-field {
+        width: calc(100% - 20px);
+        padding: 8px;
+        margin-bottom: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        font-size: 14px;
+    }
+
+    .book-now-button {
+        width: 100%;
+        padding: 10px;
+        border: none;
+        border-radius: 5px;
+        background-color: #4e9984;
+        color: #fff;
+        font-size: 16px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+        margin-top: 20px;
+    }
+
+    .book-now-button:hover {
+        background-color: #4d9a8c;
+    }
+</style>
+<footer>
+    <p>&copy; 2024 KASTA Systems. All rights reserved.</p>
+</footer>

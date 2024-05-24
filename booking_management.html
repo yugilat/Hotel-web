@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Booking Management</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" sizes="32x32" href="HotelLogo2.png">
+    <style>
+        body {
+            background: rgb(55, 20, 20);
+            background: linear-gradient(90deg, rgba(55, 20, 20, 1) 0%, rgba(1, 1, 47, 1) 91%);
+            color: white;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        .banner {
+            background-image: none;
+        }
+
+        .admin-dashboard {
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        .table-container {
+            width: 80%;
+            margin: auto;
+            margin-top: 50px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            color: white;
+            margin-top: 20px;
+            background-color: #1a1a1a;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0px 0px 50px rgba(0, 0, 0, 0.5);
+        }
+
+        th, td {
+            padding: 15px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #333;
+        }
+
+        tr:nth-child(even) {
+            background-color: #444;
+        }
+
+        tr:hover {
+            background-color: #555;
+        }
+
+        td {
+            border-bottom: 1px solid #555;
+        }
+
+        th {
+            border-bottom: 2px solid #555;
+        }
+
+        .remove-button {
+            color: #ff4c4c;
+            cursor: pointer;
+        }
+
+        .remove-button:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="banner">
+        <header>
+            <div class="navbar">
+                <img src="HotelLogo2.png" class="logo" />
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="photo.html">Photos</a></li>
+                    <li><a href="room.html">Rooms</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="registration.html">Login</a></li>
+                </ul>
+            </div>
+        </header>
+
+        <main>
+            <section class="admin-dashboard">
+                <h1>Booking Management</h1>
+                <div class="table-container">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Name</th>
+                                <th>Room Name</th>
+                                <th>Room Type</th>
+                                <th>Check-in Date</th>
+                                <th>Check-out Date</th>
+                                <th>Adults</th>
+                                <th>Children</th>
+                                <th>Payment Method</th>
+                                <th>Status</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                        <tbody id="booking-table-body">
+                            <!-- Dynamic booking data will be inserted here -->
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+        </main>
+    </div>
+    <footer>
+        <p>&copy; 2024 KASTA Systems. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // Function to render booking data into the table
+        function renderBookings() {
+            const tableBody = document.getElementById('booking-table-body');
+            tableBody.innerHTML = ''; // Clear existing rows
+
+            // Retrieve existing bookings from local storage or initialize as empty array
+            const bookings = JSON.parse(localStorage.getItem('bookings')) || [];
+
+            bookings.forEach((booking, index) => {
+                const row = document.createElement('tr');
+                row.innerHTML = `
+                    <td>${booking.name}</td>
+                    <td>${booking.roomName}</td>
+                    <td>${booking.roomType}</td>
+                    <td>${booking.checkInDate}</td>
+                    <td>${booking.checkOutDate}</td>
+                    <td>${booking.adults}</td>
+                    <td>${booking.children}</td>
+                    <td>${booking.paymentMethod}</td>
+                    <td>${booking.status}</td>
+                    <td><span class="remove-button" onclick="removeBooking(${index})">Remove</span></td>
+                `;
+                tableBody.appendChild(row);
+            });
+        }
+
+        // Function to remove a booking from the table and local storage
+        function removeBooking(index) {
+            // Retrieve existing bookings from local storage
+            let bookings = JSON.parse(localStorage.getItem('bookings')) || [];
+
+            // Remove the booking at the specified index
+            bookings.splice(index, 1);
+
+            // Save updated bookings array back to local storage
+            localStorage.setItem('bookings', JSON.stringify(bookings));
+
+            // Re-render the bookings table
+            renderBookings();
+        }
+
+        // Render the bookings on page load
+        document.addEventListener('DOMContentLoaded', () => {
+            renderBookings();
+        });
+    </script>
+    
+</body>
+</html>

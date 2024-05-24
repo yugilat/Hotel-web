@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rooms</title>
+    <link rel="stylesheet" href="style.css"> 
+    <link rel="stylesheet" href="registration.css"> 
+    <link rel="icon" type="image/png" sizes="32x32" href="HotelLogo2.png">
+</head>
+<body>
+ 
+    <div class="banner">
+        <div class="background-animation"></div>
+
+        <header>
+            <div class="navbar">
+                <img src="HotelLogo2.png" class="logo" />
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="photo.html">Photos</a></li>
+                    <li><a href="room.html">Rooms</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="registration.html">Login</a></li>
+                </ul>
+            </div>
+        </header>
+
+        <main>
+            <section class="room-list">
+                <h1>AVAILABLE ROOMS</h1>
+        
+                <a href="standard_room_page.html" class="room-link">
+                    <div class="container">
+                        <div class="box">
+                            <span class="title">Standard Room</span>
+                            <img src="standardroom1.jpg" alt="Standard Room" class="room-image">
+                            <div>
+                                <strong>Price:</strong>
+                                <p class="price">$60 per night</p>
+                            </div>
+                           
+                        </div>
+                    </div>
+                </a>
+        
+                <a href="deluxe_room_page.html" class="room-link">
+                    <div class="container">
+                        <div class="box">
+                            <span class="title">Deluxe Room</span>
+                            <img src="deluxeroom1.jpg" alt="Deluxe Room" class="room-image">
+                            <div>
+                                <strong>Price:</strong>
+                                <p class="price">$70 per night</p>
+                            </div>
+                          
+                        </div>
+                    </div>
+                </a>
+        
+                <a href="business_room_page.html" class="room-link">
+                    <div class="container">
+                        <div class="box">
+                            <span class="title">Business Room</span>
+                            <img src="businessroom1.jpg" alt="Business Room" class="room-image">
+                            <div>
+                                <strong>Price:</strong>
+                                <p class="price">$65 per night</p>
+                            </div>
+                           
+                        </div>
+                    </div>
+                </a>
+        
+                <a href="suite_room_page.html" class="room-link">
+                    <div class="container">
+                        <div class="box">
+                            <span class="title">Suite Room</span>
+                            <img src="suiteroom1.jpg" alt="Suite Room" class="room-image">
+                            <div>
+                                <strong>Price:</strong>
+                                <p class="price">$90 per night</p>
+                            </div>
+                            
+                        </div>
+                    </div>
+                </a>
+        
+            </section>
+        </main>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 KASTA Systems. All rights reserved.</p>
+    </footer>
+</body>
+</html>
+
+<style>
+    body {
+        background: rgb(55,20,20);
+        background: linear-gradient(90deg, rgba(55,20,20,1) 0%, rgba(1,1,47,1) 91%);
+        color: white;
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+    }
+
+    .banner {
+        background-image: none;
+    }
+
+    .room-list {
+        text-align: center;
+        margin-top: 50px;
+    }
+
+    .container {
+    display: inline-block;
+    width: 30%;
+    margin: 20px;
+    background-color: #1a1a1a;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0px 0px 50px rgba(0, 0, 0, 0.5);  
+    color: #ffffff;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; 
+}
+
+.container:hover {
+    transform: scale(0.98);
+    box-shadow: 0px 0px 30px 1px rgba(0, 255, 117, 0.30);
+}
+    .box {
+        margin-bottom: 20px;
+    }
+
+    .title {
+        font-size: 24px;
+        margin-bottom: 10px;
+    }
+
+    .price {
+        font-weight: bold;
+        color: #469fff;
+        margin-bottom: 30px;
+    }
+
+    .availability {
+        font-weight: bold;
+        color: #62e681;
+    }
+
+    .room-image {
+        width: 400px;
+        height: 250px;
+        display: block;
+        margin: 0 auto;
+        margin-bottom: 20px;
+        border-radius: 10px; 
+    }
+</style>
